@@ -1,4 +1,3 @@
 # DEMO FILE
 
-
 DEMO TEXT

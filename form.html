@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     form{
+         border: 2px solid black;
+         width:fit-content   ;
+     }
+     td{
+         border: 1px solid black;
+     }
+    </style>
+
+    <script>
+        function validate(){
+            if(document.getElementById('name').value==""){
+                    alert("enter name")
+                    document.getElementById('name').focus();
+                    return false
+            }
+            var emailId = document.myf.email.value;
+            var atposition = emailId.indexOf('@');
+            var dotposition = x.lastIndexOf('.');
+            if(document.getElementById('em').value=="" || atposition<1|| dotposition<atposition+2 || dotposition+2>=x.length){
+                alert("enter email")
+                    document.getElementById('em').focus();
+                    return false
+            }
+            if(document.getElementById('zip').value==""|| isNaN(document.getElementById('zip').value)||
+            document.getElementById('zip').value.length!='6'){
+                alert("enter zip code")
+                    document.getElementById('zip').focus();
+                    return false
+            }
+            if(document.getElementById('sel').value="red"){
+                alert("select country")
+                    document.getElementById('sel').focus();
+                    return false
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form action="" name="myf" onsubmit="return(validate());">
+        <table>
+            <tr><td id="nn">Name</td>
+                <td><input id="name" type="text"></td>
+            </tr>
+            <tr><td>E-Mail</td>
+            <td><input id="em" type="email"></td></tr>
+            <tr><td>        Zip code 
+            </td>
+        <td>        <input id="zip" type="text">
+        </td></tr>
+        <tr><td>        country
+        </td>
+    <td>
+        <select name="select" id="sel">
+            <option value="red">Red</option>
+            <option value="bb">Red</option>
+            <option value="gg">Red</option>
+
+        </select>
+    </td></tr>
+    <tr><td><input  type="submit"></td></tr>
+        </table>
+        
+        
+        
+        
+      
+        
+    </form>
+</body>
+</html>
